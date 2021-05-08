@@ -1,92 +1,336 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Responsive Table with DataTables</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.css'>
-<link rel='stylesheet' href='https://cdn.datatables.net/responsive/1.0.4/css/dataTables.responsive.css'><link rel="stylesheet" href="./style.css">
+  <title>藥物外觀查詢系統</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
 
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<h2>Responsive Table with DataTables</h2>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <table summary="This table shows how to create responsive tables using Datatables' extended functionality" class="table table-bordered table-hover dt-responsive">
-        <caption class="text-center">An example of a responsive table based on <a href="https://datatables.net/extensions/responsive/" target="_blank">DataTables</a>:</caption>
-        <thead>
-          <tr>
-            <th>Country</th>
-            <th>Languages</th>
-            <th>Population</th>
-            <th>Median Age</th>
-            <th>Area (Km²)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Argentina</td>
-            <td>Spanish (official), English, Italian, German, French</td>
-            <td>41,803,125</td>
-            <td>31.3</td>
-            <td>2,780,387</td>
-          </tr>
-          <tr>
-            <td>Australia</td>
-            <td>English 79%, native and other languages</td>
-            <td>23,630,169</td>
-            <td>37.3</td>
-            <td>7,739,983</td>
-          </tr>
-          <tr>
-            <td>Greece</td>
-            <td>Greek 99% (official), English, French</td>
-            <td>11,128,404</td>
-            <td>43.2</td>
-            <td>131,956</td>
-          </tr>
-          <tr>
-            <td>Luxembourg</td>
-            <td>Luxermbourgish (national) French, German (both administrative)</td>
-            <td>536,761</td>
-            <td>39.1</td>
-            <td>2,586</td>
-          </tr>
-          <tr>
-            <td>Russia</td>
-            <td>Russian, others</td>
-            <td>142,467,651</td>
-            <td>38.4</td>
-            <td>17,076,310</td>
-          </tr>
-          <tr>
-            <td>Sweden</td>
-            <td>Swedish, small Sami- and Finnish-speaking minorities</td>
-            <td>9,631,261</td>
-            <td>41.1</td>
-            <td>449,954</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="5" class="text-center">Data retrieved from <a href="http://www.infoplease.com/ipa/A0855611.html" target="_blank">infoplease</a> and <a href="http://www.worldometers.info/world-population/population-by-country/" target="_blank">worldometers</a>.</td>
-          </tr>
-        </tfoot>
-      </table>
+<body>
+  <!-- partial:index.partial.html -->
+  <h1>藥物外觀查詢系統</h1>
+  <div id="filters">
+
+    <div class="ui-group">
+      <div class="button-group">
+        <button class="button is-checked" data-filter="">藥物查詢</button>
+        <button class="button" data-filter=".my-drug">我的藥盒</button>
+      </div>
+    </div>
+
+    <div class="ui-group">
+      <h3>藥品劑型</h3>
+      <div class="button-group" data-filter-group="Drug-dosage-form">
+        <button class="button is-checked" data-filter="">全部</button>
+        <button class="button" data-filter=".lozenge">錠劑</button>
+        <button class="button" data-filter=".capsule">膠囊</button>
+      </div>
+    </div>
+    <div class="ui-group">
+      <h3>藥品刻痕</h3>
+      <div class="button-group" data-filter-group="Drug-scoring">
+        <button class="button is-checked" data-filter="">全部</button>
+        <button class="button" data-filter=".scoring">有</button>
+        <button class="button" data-filter=".nonscoring">無</button>
+      </div>
+    </div>
+    <div class="ui-group">
+      <h3>藥品顏色</h3>
+      <div class="button-group" data-filter-group="Drug-color">
+        <button class="button is-checked" data-filter="">全部</button>
+        <button class="button" data-filter=".white">白色</button>
+        <button class="button" data-filter=".red">紅色</button>
+        <button class="button" data-filter=".orange">橘色</button>
+        <button class="button" data-filter=".yellow">黃色</button>
+        <button class="button" data-filter=".green">綠色</button>
+        <button class="button" data-filter=".blue">藍色</button>
+        <button class="button" data-filter=".purple">紫色</button>
+        <button class="button" data-filter=".gray">灰色</button>
+        <button class="button" data-filter=".black">黑色</button>
+        <button class="button" data-filter=".brown">咖啡色</button>
+      </div>
+    </div>
+    <div class="ui-group">
+      <h3>藥品形狀</h3>
+      <div class="button-group" data-filter-group="Drug-shape">
+        <button class="button is-checked" data-filter="">全部</button>
+        <button class="button" data-filter=".square">方形</button>
+        <button class="button" data-filter=".diamond">菱形</button>
+        <button class="button" data-filter=".round">圓形</button>
+        <button class="button" data-filter=".oval">橢圓形</button>
+        <button class="button" data-filter=".triangle">三角形</button>
+        <button class="button" data-filter=".pentagon">五角形</button>
+        <button class="button" data-filter=".hexagonal">六角形</button>
+        <button class="button" data-filter=".octagon">八邊形</button>
+        <button class="button" data-filter=".heart-shaped">心形</button>
+      </div>
     </div>
   </div>
-</div>
 
-<p class="p">Demo by George Martsoukos. <a href="http://www.sitepoint.com/responsive-data-tables-comprehensive-list-solutions" target="_blank">See article</a>.</p>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js'></script>
-<script src='https://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.js'></script>
-<script src='https://cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js'></script><script  src="./script.js"></script>
+
+  <div class="grid">
+
+    <div class="cards">
+      <div class="card Drug＿Select lozenge scoring white round my-drug">
+        <div class="card__image-holder">
+          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/7608T.jpg" alt="" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            維他命B6
+            <small>每天5-25mg，持續3週。維持劑量每天1.5-5mg</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            藥品簡介:
+            本品是一種水溶性維他命B6。<br>
+            可能副作用:
+            葉酸降低、皮膚感覺異常、嗜睡。
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">加入藥盒</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card Drug＿Select capsule nonscoring green">
+        <div class="card__image-holder">
+          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/39081.jpg" alt="" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            必克風膠囊
+            <small>成人：每次1粒，每天3次。<br>
+              兒童(8~14歲)：每次1/2粒，每天3次。</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            藥品簡介:
+            本品為複方綜合感冒藥。<br>
+            可能副作用:
+            過敏反應、嗜睡、口乾、倦怠感、視覺模糊、錯亂、小便困難、心跳加快、神經質、興奮、睡不著與心膊加快。
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">加入藥盒</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card Drug＿Select lozenge scoring white round">
+        <div class="card__image-holder">
+          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/27033.jpg" alt="" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            乙醯水楊酸錠
+            <small>成人：每4-6小時給予1次，最大劑量4g/24hr。</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            藥品簡介:
+            本品為非麻醉性之解熱鎮痛劑。<br>
+            可能副作用:
+            腸胃不適、消化不良、噁心、嘔吐、胃灼熱、蕁麻疹、皮疹、血管性水腫、出血時間延長、消化性潰瘍、過敏性反應、Reye's症候群、耳鳴等。
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">加入藥盒</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card Drug＿Select capsule nonscoring purple my-drug">
+        <div class="card__image-holder">
+          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/DCC00019.jpg" alt="" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            葡萄子
+            <small>每日1-3次，每次1-2粒，飯前食用</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            藥品簡介:
+            葡萄子含有兒茶酸、表兒茶酸、咖啡酸、阿魏酸等有機酸，它們都是強抗氧化劑，能與OPC配合發揮更強的抗氧化作用。
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">加入藥盒</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card Drug＿Select lozenge scoring white round">
+        <div class="card__image-holder">
+          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/0708T.jpg" alt="" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            配尼西林-V
+            <small>每次劑量125-500mg，每6-8小時使用1次<br>
+              每日最高劑量為3g。</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            藥品簡介:
+            本品為一種天然的盤尼西林類抗生素。<br>
+            可能副作用:
+            腹瀉、噁心、嘔吐、皮疹、溶血性貧血、過敏反應等。
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">加入藥盒</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card Drug＿Select lozenge scoring blue square">
+        <div class="card__image-holder">
+          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/3509T.jpg" alt="" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            和寧錠
+            <small>12歲以上兒童及成人為0.5-5mg，一天服用2-3次。</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            藥品簡介:
+            本品是butyrophenones類抗精神病藥，為一強效中樞神經度巴明(Dopamine)接受器拮抗劑。<br>
+            可能副作用:
+            低血壓、便秘、口乾舌燥、想睡、 靜坐不能、帕金森氏症、視覺模糊。
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">加入藥盒</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card Drug＿Select lozenge nonscoring yellow round">
+        <div class="card__image-holder">
+          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/9804T.jpg" alt="" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            畢癆疾
+            <small>成人:與INAH配合使用，每日服用劑量為500mg，對於長期治療或複發者，每日劑量可提高到750-1000mg。<br>
+              小孩:每日每公斤體重20-25mg，往往與PAS (P-aminosalicylate)併用。</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            藥品簡介:
+            本品是thioamide衍生物，為抗藥性結核的二線治療藥物。<br>
+            可能副作用:
+            噁心、嘔吐、腹瀉、食慾缺乏、過度的唾液分泌、金屬味、腹痛、沮喪、憂慮、頭暈、昏睡、頭痛、姿勢性低血壓、複視、視覺模糊、血小板低下、紫斑、脫毛症、皮炎、低血糖、甲狀腺機能低下。
+            臨床用途結核病。
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">加入藥盒</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card Drug＿Select capsule nonscoring blue">
+        <div class="card__image-holder">
+          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/31104.jpg" alt="" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            必克風膠囊
+            <small>體重70 kg以下孩童：開始的每日總劑量應約為0.5 mg/kg，至少三天後，每日總劑量增加至約1.2 mg/kg。
+              <br>體重超過70 kg孩童及成人的劑量：開始的每日總劑量應為40 mg，至少三天後，每日總劑量增加至約80 mg。</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            藥品簡介:
+            Atomoxetine是一選擇性正腎上腺素再回收抑制劑。它是治療孩童、青少年及成人注意力不足/過動症的非興奮類藥物。<br>
+            可能副作用:
+            頭痛、上腹部疼痛、食慾降低、嘔吐、咳嗽、易怒、眩暈、嗜睡、消化不良、皮膚炎及流鼻水等。
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">加入藥盒</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src='https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js'></script>
+  <script src="./script.js"></script>
 
 </body>
+
 </html>
