@@ -1,336 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>藥物外觀查詢系統</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./style.css">
+  <title>CodePen - Responsive Social Platform UI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
 
 </head>
-
 <body>
-  <!-- partial:index.partial.html -->
-  <h1>藥物外觀查詢系統</h1>
-  <div id="filters">
-
-    <div class="ui-group">
-      <div class="button-group">
-        <button class="button is-checked" data-filter="">藥物查詢</button>
-        <button class="button" data-filter=".my-drug">我的藥盒</button>
-      </div>
+<!-- partial:index.partial.html -->
+<div class="container" x-data="{ rightSide: false, leftSide: false }">
+  <div class="left-side" :class="{'active' : leftSide}">
+    <div class="left-side-button" @click="leftSide = !leftSide">
+      <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+  <path d="M19 12H5M12 19l-7-7 7-7"/>
+</svg>
     </div>
-
-    <div class="ui-group">
-      <h3>藥品劑型</h3>
-      <div class="button-group" data-filter-group="Drug-dosage-form">
-        <button class="button is-checked" data-filter="">全部</button>
-        <button class="button" data-filter=".lozenge">錠劑</button>
-        <button class="button" data-filter=".capsule">膠囊</button>
-      </div>
+  </div>
+  <div class="main">
+    <div class="search-bar">
+      <input type="text" placeholder="Search" />
+      <button class="right-side-button" @click="rightSide = !rightSide">
+         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      </button>
     </div>
-    <div class="ui-group">
-      <h3>藥品刻痕</h3>
-      <div class="button-group" data-filter-group="Drug-scoring">
-        <button class="button is-checked" data-filter="">全部</button>
-        <button class="button" data-filter=".scoring">有</button>
-        <button class="button" data-filter=".nonscoring">無</button>
+    <div class="main-container">
+      <div class="profile">
+        <div class="profile-avatar">
+          <img src="S__52494346.jpg" alt="" class="profile-img">
+          <div class="profile-name">Lisa Wu</div>
+        </div>
+        <img src="IMG_5366.JPG" alt="" class="profile-cover">
+        <div class="profile-menu">
+          <a class="profile-menu-link active">碩一</a>
+          <a class="profile-menu-link">碩二</a>
+          <a class="profile-menu-link">出社會</a>
+        </div>
       </div>
-    </div>
-    <div class="ui-group">
-      <h3>藥品顏色</h3>
-      <div class="button-group" data-filter-group="Drug-color">
-        <button class="button is-checked" data-filter="">全部</button>
-        <button class="button" data-filter=".white">白色</button>
-        <button class="button" data-filter=".red">紅色</button>
-        <button class="button" data-filter=".orange">橘色</button>
-        <button class="button" data-filter=".yellow">黃色</button>
-        <button class="button" data-filter=".green">綠色</button>
-        <button class="button" data-filter=".blue">藍色</button>
-        <button class="button" data-filter=".purple">紫色</button>
-        <button class="button" data-filter=".gray">灰色</button>
-        <button class="button" data-filter=".black">黑色</button>
-        <button class="button" data-filter=".brown">咖啡色</button>
-      </div>
-    </div>
-    <div class="ui-group">
-      <h3>藥品形狀</h3>
-      <div class="button-group" data-filter-group="Drug-shape">
-        <button class="button is-checked" data-filter="">全部</button>
-        <button class="button" data-filter=".square">方形</button>
-        <button class="button" data-filter=".diamond">菱形</button>
-        <button class="button" data-filter=".round">圓形</button>
-        <button class="button" data-filter=".oval">橢圓形</button>
-        <button class="button" data-filter=".triangle">三角形</button>
-        <button class="button" data-filter=".pentagon">五角形</button>
-        <button class="button" data-filter=".hexagonal">六角形</button>
-        <button class="button" data-filter=".octagon">八邊形</button>
-        <button class="button" data-filter=".heart-shaped">心形</button>
+      <div class="timeline">
+        <div class="timeline-right">
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2020/11/22</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">第一次爬十八尖山
+              <div class="album-photos">
+                <img src="S__52494347.jpg" alt="" class="album-photo" onclick="showFullImage(this)" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2020/11/22</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">轉職攝影師的我
+              <div class="album-photos">
+                <img src="S__52494348.jpg" alt="" class="album-photo" onclick="showFullImage(this)" />
+              </div>
+              <div class="album-photos">
+                <img src="S__52494349.jpg" alt="" class="album-photo" onclick="showFullImage(this)" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <div class="right-side" :class="{ 'active': rightSide }">
+    <div class="account">
+      <button class="account-button">
+        <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <path d="M22 6l-10 7L2 6" />
+        </svg>
+      </button>
+      <button class="account-button">
+        <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+          <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" />
+        </svg>
+      </button>
+      <span class="account-user">Lisa Wu
+        <img src="S__52494346.jpg" alt="" class="account-profile" alt="">
+        <span>▼</span>
+      </span>
+    </div>
 
-
-  <div class="grid">
-
-    <div class="cards">
-      <div class="card Drug＿Select lozenge scoring white round my-drug">
-        <div class="card__image-holder">
-          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/7608T.jpg" alt="" />
-        </div>
-        <div class="card-title">
-          <a href="#" class="toggle-info btn">
-            <span class="left"></span>
-            <span class="right"></span>
-          </a>
-          <h2>
-            維他命B6
-            <small>每天5-25mg，持續3週。維持劑量每天1.5-5mg</small>
-          </h2>
-        </div>
-        <div class="card-flap flap1">
-          <div class="card-description">
-            藥品簡介:
-            本品是一種水溶性維他命B6。<br>
-            可能副作用:
-            葉酸降低、皮膚感覺異常、嗜睡。
-          </div>
-          <div class="card-flap flap2">
-            <div class="card-actions">
-              <a href="#" class="btn">加入藥盒</a>
-            </div>
-          </div>
+    <div class="side-wrapper contacts">
+      <div class="side-title">CONTACTS</div>
+      <div class="user">
+        <img src="IMG_6703.JPG" class="user-img">
+        <div class="username">阿極
+          <div class="user-status"></div>
         </div>
       </div>
     </div>
-
-    <div class="cards">
-      <div class="card Drug＿Select capsule nonscoring green">
-        <div class="card__image-holder">
-          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/39081.jpg" alt="" />
-        </div>
-        <div class="card-title">
-          <a href="#" class="toggle-info btn">
-            <span class="left"></span>
-            <span class="right"></span>
-          </a>
-          <h2>
-            必克風膠囊
-            <small>成人：每次1粒，每天3次。<br>
-              兒童(8~14歲)：每次1/2粒，每天3次。</small>
-          </h2>
-        </div>
-        <div class="card-flap flap1">
-          <div class="card-description">
-            藥品簡介:
-            本品為複方綜合感冒藥。<br>
-            可能副作用:
-            過敏反應、嗜睡、口乾、倦怠感、視覺模糊、錯亂、小便困難、心跳加快、神經質、興奮、睡不著與心膊加快。
-          </div>
-          <div class="card-flap flap2">
-            <div class="card-actions">
-              <a href="#" class="btn">加入藥盒</a>
-            </div>
-          </div>
-        </div>
+    <div class="search-bar right-search">
+      <input type="text" placeholder="Search" />
+      <div class="search-bar-svgs">
+        <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+        </svg>
+        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.34 469.34">
+          <path d="M456.84 76.17l-64-64.06c-16.13-16.13-44.18-16.17-60.37.04L45.77 301.67a10.73 10.73 0 00-2.7 4.59L.41 455.73a10.68 10.68 0 0013.19 13.2l149.33-42.7c1.73-.5 3.3-1.42 4.58-2.7l289.33-286.98c8.06-8.07 12.5-18.78 12.5-30.19s-4.44-22.12-12.5-30.2zM285.99 89.74L325.25 129l-205 205-14.7-29.44a10.67 10.67 0 00-9.55-5.9H78.92L286 89.75zM26.2 443.14l13.9-48.64 34.74 34.74-48.64 13.9zm123.14-35.18L98.3 422.54l-51.5-51.5L61.38 320H89.4l18.38 36.77a10.67 10.67 0 004.77 4.77l36.78 18.39v28.03zm21.33-17.54v-17.09c0-4.04-2.28-7.72-5.9-9.54l-29.43-14.7 205-205 39.26 39.26-208.93 207.07zm271.11-268.7l-47.03 46.61L301 74.6l46.59-47c8.06-8.07 22.1-8.07 30.16 0l64 64c4.03 4.03 6.25 9.38 6.25 15.08s-2.22 11.05-6.22 15.05z" /></svg>
+        <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14"/>
+    </svg>
       </div>
     </div>
-
-    <div class="cards">
-      <div class="card Drug＿Select lozenge scoring white round">
-        <div class="card__image-holder">
-          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/27033.jpg" alt="" />
-        </div>
-        <div class="card-title">
-          <a href="#" class="toggle-info btn">
-            <span class="left"></span>
-            <span class="right"></span>
-          </a>
-          <h2>
-            乙醯水楊酸錠
-            <small>成人：每4-6小時給予1次，最大劑量4g/24hr。</small>
-          </h2>
-        </div>
-        <div class="card-flap flap1">
-          <div class="card-description">
-            藥品簡介:
-            本品為非麻醉性之解熱鎮痛劑。<br>
-            可能副作用:
-            腸胃不適、消化不良、噁心、嘔吐、胃灼熱、蕁麻疹、皮疹、血管性水腫、出血時間延長、消化性潰瘍、過敏性反應、Reye's症候群、耳鳴等。
-          </div>
-          <div class="card-flap flap2">
-            <div class="card-actions">
-              <a href="#" class="btn">加入藥盒</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cards">
-      <div class="card Drug＿Select capsule nonscoring purple my-drug">
-        <div class="card__image-holder">
-          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/DCC00019.jpg" alt="" />
-        </div>
-        <div class="card-title">
-          <a href="#" class="toggle-info btn">
-            <span class="left"></span>
-            <span class="right"></span>
-          </a>
-          <h2>
-            葡萄子
-            <small>每日1-3次，每次1-2粒，飯前食用</small>
-          </h2>
-        </div>
-        <div class="card-flap flap1">
-          <div class="card-description">
-            藥品簡介:
-            葡萄子含有兒茶酸、表兒茶酸、咖啡酸、阿魏酸等有機酸，它們都是強抗氧化劑，能與OPC配合發揮更強的抗氧化作用。
-          </div>
-          <div class="card-flap flap2">
-            <div class="card-actions">
-              <a href="#" class="btn">加入藥盒</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cards">
-      <div class="card Drug＿Select lozenge scoring white round">
-        <div class="card__image-holder">
-          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/0708T.jpg" alt="" />
-        </div>
-        <div class="card-title">
-          <a href="#" class="toggle-info btn">
-            <span class="left"></span>
-            <span class="right"></span>
-          </a>
-          <h2>
-            配尼西林-V
-            <small>每次劑量125-500mg，每6-8小時使用1次<br>
-              每日最高劑量為3g。</small>
-          </h2>
-        </div>
-        <div class="card-flap flap1">
-          <div class="card-description">
-            藥品簡介:
-            本品為一種天然的盤尼西林類抗生素。<br>
-            可能副作用:
-            腹瀉、噁心、嘔吐、皮疹、溶血性貧血、過敏反應等。
-          </div>
-          <div class="card-flap flap2">
-            <div class="card-actions">
-              <a href="#" class="btn">加入藥盒</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cards">
-      <div class="card Drug＿Select lozenge scoring blue square">
-        <div class="card__image-holder">
-          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/3509T.jpg" alt="" />
-        </div>
-        <div class="card-title">
-          <a href="#" class="toggle-info btn">
-            <span class="left"></span>
-            <span class="right"></span>
-          </a>
-          <h2>
-            和寧錠
-            <small>12歲以上兒童及成人為0.5-5mg，一天服用2-3次。</small>
-          </h2>
-        </div>
-        <div class="card-flap flap1">
-          <div class="card-description">
-            藥品簡介:
-            本品是butyrophenones類抗精神病藥，為一強效中樞神經度巴明(Dopamine)接受器拮抗劑。<br>
-            可能副作用:
-            低血壓、便秘、口乾舌燥、想睡、 靜坐不能、帕金森氏症、視覺模糊。
-          </div>
-          <div class="card-flap flap2">
-            <div class="card-actions">
-              <a href="#" class="btn">加入藥盒</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cards">
-      <div class="card Drug＿Select lozenge nonscoring yellow round">
-        <div class="card__image-holder">
-          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/9804T.jpg" alt="" />
-        </div>
-        <div class="card-title">
-          <a href="#" class="toggle-info btn">
-            <span class="left"></span>
-            <span class="right"></span>
-          </a>
-          <h2>
-            畢癆疾
-            <small>成人:與INAH配合使用，每日服用劑量為500mg，對於長期治療或複發者，每日劑量可提高到750-1000mg。<br>
-              小孩:每日每公斤體重20-25mg，往往與PAS (P-aminosalicylate)併用。</small>
-          </h2>
-        </div>
-        <div class="card-flap flap1">
-          <div class="card-description">
-            藥品簡介:
-            本品是thioamide衍生物，為抗藥性結核的二線治療藥物。<br>
-            可能副作用:
-            噁心、嘔吐、腹瀉、食慾缺乏、過度的唾液分泌、金屬味、腹痛、沮喪、憂慮、頭暈、昏睡、頭痛、姿勢性低血壓、複視、視覺模糊、血小板低下、紫斑、脫毛症、皮炎、低血糖、甲狀腺機能低下。
-            臨床用途結核病。
-          </div>
-          <div class="card-flap flap2">
-            <div class="card-actions">
-              <a href="#" class="btn">加入藥盒</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cards">
-      <div class="card Drug＿Select capsule nonscoring blue">
-        <div class="card__image-holder">
-          <img class="card__image" src="https://www.cych.org.tw/pharm/newdrugpic/31104.jpg" alt="" />
-        </div>
-        <div class="card-title">
-          <a href="#" class="toggle-info btn">
-            <span class="left"></span>
-            <span class="right"></span>
-          </a>
-          <h2>
-            必克風膠囊
-            <small>體重70 kg以下孩童：開始的每日總劑量應約為0.5 mg/kg，至少三天後，每日總劑量增加至約1.2 mg/kg。
-              <br>體重超過70 kg孩童及成人的劑量：開始的每日總劑量應為40 mg，至少三天後，每日總劑量增加至約80 mg。</small>
-          </h2>
-        </div>
-        <div class="card-flap flap1">
-          <div class="card-description">
-            藥品簡介:
-            Atomoxetine是一選擇性正腎上腺素再回收抑制劑。它是治療孩童、青少年及成人注意力不足/過動症的非興奮類藥物。<br>
-            可能副作用:
-            頭痛、上腹部疼痛、食慾降低、嘔吐、咳嗽、易怒、眩暈、嗜睡、消化不良、皮膚炎及流鼻水等。
-          </div>
-          <div class="card-flap flap2">
-            <div class="card-actions">
-              <a href="#" class="btn">加入藥盒</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
   </div>
-  <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-  <script src='https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js'></script>
-  <script src="./script.js"></script>
-
+  <div class="overlay" @click="rightSide = false; leftSide = false" :class="{ 'active': rightSide || leftSide }"></div>
+</div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.4/dist/alpine.js'></script>
+  <script>
+    function showFullImage(img) {
+      // 切换图片的样式类
+      img.classList.toggle("active");
+    }
+    </script>
 </body>
-
 </html>
