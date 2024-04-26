@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Lisa-Wu memory</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container" x-data="{ rightSide: false, leftSide: false }">
+  <div class="left-side" :class="{'active' : leftSide}">
+    <div class="left-side-button" @click="leftSide = !leftSide">
+      <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+  <path d="M19 12H5M12 19l-7-7 7-7"/>
+</svg>
+    </div>
+  </div>
+  <div class="main">
+    <div class="search-bar">
+      <input type="text" placeholder="Search" />
+      <button class="right-side-button" @click="rightSide = !rightSide">
+         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      </button>
+    </div>
+    <div class="main-container">
+      <div class="profile">
+        <div class="profile-avatar">
+          <img src="S__52494346.jpg" alt="" class="profile-img">
+          <div class="profile-name">Lisa Wu</div>
+        </div>
+        <img src="IMG_5366.JPG" alt="" class="profile-cover">
+        <div class="profile-menu">
+          <a class="profile-menu-link" href="index.html">碩一</a>
+          <a class="profile-menu-link" href="index2.html">碩二</a>
+          <a class="profile-menu-link" href="index3.html">出社會</a>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-right">
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2021/09/07</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">升碩二了
+              <div class="album-photos">
+                <img src="CAD681D1-014F-4C9F-8231-F7A887A91DC3.jpg" alt="" class="album-photo"  />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2021/10/28</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">這件白色外套很適合我
+              <div class="album-photos">
+                <img src="C860D18B-BF5D-4DA8-B799-D3B13A3B1139.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="34CB025B-3C4D-4070-B5A9-434C875D0516.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2021/11/02</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">最喜歡吃壽司
+              <div class="album-photos">
+                <img src="F2876445-C404-4655-A8C5-CD881514236E.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2021/11/26</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">我的第一個小ck包包
+              <div class="album-photos">
+                <img src="96E8323D-7818-4D31-B8DF-9E70657989D3.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2021/12/01</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">慶祝，吃陶板屋
+              <div class="album-photos">
+                <img src="E04814BB-CCDF-47DF-8D91-3586056A2708.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="742CE22C-78C1-499C-8910-C43EF2DC5250.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2021/12/15</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">慶生吃蛋糕
+              <div class="album-photos">
+                <img src="5B3152BC-8292-4743-84ED-72F13863DBA3.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2021/12/16</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">繼續慶生吃最喜歡的壽喜燒
+              <div class="album-photos">
+                <img src="D03EFA81-6BA7-40BA-8797-7883EF370D18.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="A7ED1F70-2B57-4828-BC3F-CBB1E9D16CAF.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="4E868B42-A904-4455-92E7-B6AA6966750C.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2021/12/16</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">每天開ㄧ個的生日禮物
+              <div class="album-photos">
+                <img src="E499F4AD-A9BC-4BF9-92D9-4F047709F624.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2021/12/29</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">聖誕節
+              <div class="album-photos">
+                <img src="53BA3E54-ECB4-46F8-BCB9-99BCBEBEA4B3.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="25CBC4D5-0874-45FA-8B17-B2617BDF3278.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="0C130976-081E-419F-AE3E-466CB9299992.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/01/08</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">又是壽喜燒
+              <div class="album-photos">
+                <img src="005BA5D5-2BC2-4BC1-A4B3-DB7BF171C3C7.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="39F882B5-FFAC-4552-8C65-3C226BAF249A.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/01/25</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">來吃新開的早餐店，白金小豬
+              <div class="album-photos">
+                <img src="EAB7BC0B-810D-46F5-A4F5-238F5A0D7DD5.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="1AEB1089-B2C5-43AE-9800-C1962653F33C.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/02/08</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">偷戴帽子
+              <div class="album-photos">
+                <img src="3BC203D9-4A1D-47D4-9DAC-9FE78651C190.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/02/17</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">太鼓達人
+              <div class="album-photos">
+                <img src="0195AB81-D8B0-43DB-989B-62D180667819.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/03/02</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">校園路跑
+              <div class="album-photos">
+                <img src="A2F7A82F-1AC7-4463-8DFA-5CE3744A87F1.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="4E564E4F-C929-435F-AA02-64B7DED68A77.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/03/03</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">東門市場
+              <div class="album-photos">
+                <img src="E26E41D1-D8D9-44E3-884B-C78F55BAAD4A.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/03/08</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">還是小時候牛排比較好吃
+              <div class="album-photos">
+                <img src="5C97A61A-5D31-4DF3-8734-F574B587AC49.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/03/15</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">大大好頑皮
+              <div class="album-photos">
+                <img src="48B19554-BEF4-4358-B277-837679163F05.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/03/18</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">慈雲夜市打彈珠
+              <div class="album-photos">
+                <img src="3E8D7482-52E6-4A9F-8800-1757886A0304.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/03/31</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">拍畢業照
+              <div class="album-photos">
+                <img src="75F52303-D44F-42B7-B6FD-241FF06B4E73.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="9A576C16-510C-442E-9791-34EAD5DE6CC0.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="3A6317EA-F5C7-4534-BD5D-AB92562C0068.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/05/10</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">去墾丁玩
+              <div class="album-photos">
+                <img src="D846D408-B969-4233-AF3F-97BCFEFB17EA.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="85543CD8-A959-4938-A8EF-46788FCDEA94.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="077D44C0-2A0E-40C6-861F-B1D55014EE63.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/05/22</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">換新手機
+              <div class="album-photos">
+                <img src="FDD75D9E-C3F7-4AA3-AF3A-04C6C968F940.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="DC08327A-AAE9-4373-ABB3-A4CB986C0A1D.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/06/10</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">畢業典禮
+              <div class="album-photos">
+                <img src="CC77964D-23B9-4E18-A1A1-918DB220993F.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="337B85A9-8DDD-407D-B950-BB1D568D8BF5.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="42BB06AD-E42D-4233-9C5F-0B1A0C0332AE.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/06/20</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">看籃球比賽，工程獅gogogo
+              <div class="album-photos">
+                <img src="4D8AD074-759F-464C-B888-6EC98D35D670.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/07/23</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">
+              <div class="album-photos">
+                <img src="79E630FE-1FD7-4E29-A6BF-2DE229DC43AC.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="62D3E000-F9EE-46C6-A692-7E9CAFD0A711.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/08/04</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">吃麥味登
+              <div class="album-photos">
+                <img src="0F4FA24F-B8D5-4355-90A2-29D3571148D9.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/08/09</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">小時候牛排
+              <div class="album-photos">
+                <img src="950DCC94-8869-4C1F-8C79-CA1F27EABA5E.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/08/27</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">竹東夜市豬血湯
+              <div class="album-photos">
+                <img src="23F50D36-ABA2-48E9-964C-C194070C93D3.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/09/15</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">買到友善時光了
+              <div class="album-photos">
+                <img src="2140B84B-D0DF-4FFD-8C5F-70874C2297BB.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/10/27</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">抱哥
+              <div class="album-photos">
+                <img src="9775D972-0D07-409C-B858-ADF37C0C31DB.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/11/07</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">碩士口試完畢
+              <div class="album-photos">
+                <img src="36BAFD7C-35AC-4A59-AC7C-35CDF97BA896.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/11/21</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">剪髮大突破
+              <div class="album-photos">
+                <img src="C151BB73-BE9F-49B1-B6B0-BDC1D3ABB1A2.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="A067E074-86FD-4CE7-80F9-3ECB266D7A0B.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/12/02</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">實驗室
+              <div class="album-photos">
+                <img src="F45DA99C-8473-4396-A22E-4F4C7D9B2712.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="36FC0E8A-23CA-45EF-BF48-1E86F547C870.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/12/03</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">回中原
+              <div class="album-photos">
+                <img src="19CE3C83-04F8-4701-B2B3-0955C327C4A4.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/12/10</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">眼鏡就是owndays
+              <div class="album-photos">
+                <img src="2A96C472-78F2-4167-88F3-8FDAB4BED3D9.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/12/10</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">新北耶誕城
+              <div class="album-photos">
+                <img src="ADA1D8D8-2442-4A5F-A1AE-4154503ADC31.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="A924488F-C135-448B-9249-65C402756955.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="03E540EE-8ABF-447F-A33B-E645609C7CB4.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/12/30</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">新竹租屋處的的最後一晚
+              <div class="album-photos">
+                <img src="CC8196A0-DC57-4C1A-94C0-36FC34CC1046.jpg" alt="" class="album-photo" />
+              </div>
+              <div class="album-photos">
+                <img src="047260C1-E90B-4F7D-B543-44E9F15E41CE.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+          <div class="album box">
+            <div class="status-main">
+              <img src="S__52494346.jpg" class="status-img" />
+              <div class="album-detail">
+                <div class="album-title"><strong>Lisa Wu</strong></div>
+                <div class="album-date">2022/12/31</div>
+              </div>
+              <button class="intro-menu"></button>
+            </div>
+            <div class="album-content">
+              <div class="album-photos">
+                <img src="97E0528E-0951-4C18-9BD1-0AFF4542807B.jpg" alt="" class="album-photo" />
+              </div>
+            </div>
+            <div class="album-actions">
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                99
+              </a>
+              <a href="#" class="album-action">
+                <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 01-4 4H3" />
+                </svg>
+                99
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right-side" :class="{ 'active': rightSide }">
+    <div class="account">
+      <button class="account-button">
+        <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <path d="M22 6l-10 7L2 6" />
+        </svg>
+      </button>
+      <button class="account-button">
+        <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+          <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" />
+        </svg>
+      </button>
+      <span class="account-user">Lisa Wu
+        <img src="S__52494346.jpg" alt="" class="account-profile" alt="">
+        <span>▼</span>
+      </span>
+    </div>
+
+    <div class="side-wrapper contacts">
+      <div class="side-title">CONTACTS</div>
+      <div class="user">
+        <img src="IMG_6703.JPG" class="user-img">
+        <div class="username">阿極
+          <div class="user-status"></div>
+        </div>
+      </div>
+    </div>
+    <div class="search-bar right-search">
+      <input type="text" placeholder="Search" />
+      <div class="search-bar-svgs">
+        <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+        </svg>
+        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.34 469.34">
+          <path d="M456.84 76.17l-64-64.06c-16.13-16.13-44.18-16.17-60.37.04L45.77 301.67a10.73 10.73 0 00-2.7 4.59L.41 455.73a10.68 10.68 0 0013.19 13.2l149.33-42.7c1.73-.5 3.3-1.42 4.58-2.7l289.33-286.98c8.06-8.07 12.5-18.78 12.5-30.19s-4.44-22.12-12.5-30.2zM285.99 89.74L325.25 129l-205 205-14.7-29.44a10.67 10.67 0 00-9.55-5.9H78.92L286 89.75zM26.2 443.14l13.9-48.64 34.74 34.74-48.64 13.9zm123.14-35.18L98.3 422.54l-51.5-51.5L61.38 320H89.4l18.38 36.77a10.67 10.67 0 004.77 4.77l36.78 18.39v28.03zm21.33-17.54v-17.09c0-4.04-2.28-7.72-5.9-9.54l-29.43-14.7 205-205 39.26 39.26-208.93 207.07zm271.11-268.7l-47.03 46.61L301 74.6l46.59-47c8.06-8.07 22.1-8.07 30.16 0l64 64c4.03 4.03 6.25 9.38 6.25 15.08s-2.22 11.05-6.22 15.05z" /></svg>
+        <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14"/>
+    </svg>
+      </div>
+    </div>
+  </div>
+  <div class="overlay" @click="rightSide = false; leftSide = false" :class="{ 'active': rightSide || leftSide }"></div>
+</div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.4/dist/alpine.js'></script>
+</body>
+</html>
